@@ -1,0 +1,7 @@
+[1:a]aresample=44100,adelay=200|200[v1];
+[2:a]aresample=44100,adelay=3900|3900[v2];
+[3:a]aresample=44100,adelay=9400|9400[v3];
+[4:a]aresample=44100,adelay=14900|14900[v4];
+[5:a]aresample=44100,adelay=19900|19900[v5];
+[6:a]volume=0.10,afade=t=in:st=0:d=1.5,afade=t=out:st=23.2:d=2.5[pad];
+[v1][v2][v3][v4][v5][pad]amix=inputs=6:duration=longest:normalize=0,volume=0.95,atrim=0:25.7[a]

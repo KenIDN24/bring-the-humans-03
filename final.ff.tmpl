@@ -1,0 +1,6 @@
+[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1,fps=60,tpad=stop_mode=clone:stop_duration=0[base];
+[base][2:v]overlay=enable='lt(t,__T__)',format=yuva420p,split[clip][soft];
+[soft]gblur=sigma=28,eq=saturation=0.35,fade=t=in:st=__T__:d=0.8:alpha=1[soft];
+[clip][soft]overlay[bg];
+[1:v]format=yuva420p,setpts=PTS-STARTPTS+__T__/TB[card];
+[bg][card]overlay=eof_action=pass,drawbox=x=208:y=1230:w=9:h=82:color=white:t=fill:enable='gte(t,__CODE_AT__)',drawtext=fontfile=__MONO__:text=__CODE__:fontsize=62:fontcolor=0x191419:x=210:y=1271-(ascent-descent)/2:enable='gte(t,__CODE_AT__)'[v]

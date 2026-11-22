@@ -1,0 +1,3 @@
+[1:v]scale=-2:420,format=rgba[g];
+[0:v][g]overlay=x=(W-w)/2:y=440[bg];
+[bg]drawtext=fontfile=/home/hatch/workspace/makefun/scratch/bth3-assets/fonts/Inter-Bold-static.ttf:text='Scored + ranked':fontsize=62:fontcolor=white:x=(w-text_w)/2:y=900,drawtext=fontfile=/home/hatch/workspace/makefun/scratch/bth3-assets/fonts/Inter-Bold-static.ttf:text='in the open.':fontsize=62:fontcolor=white:x=(w-text_w)/2:y=992,drawtext=fontfile=/home/hatch/workspace/makefun/scratch/bth3-assets/fonts/Inter-Bold-static.ttf:text='Win, get paid in USDC':fontsize=84:fontcolor=0xc41c83:x=(w-text_w)/2:y=1084[v]
